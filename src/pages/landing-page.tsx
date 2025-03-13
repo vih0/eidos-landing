@@ -6,7 +6,7 @@ import { HeroCarousel } from "@/components/hero-caroussel";
 import { MissionItem } from "@/components/mission-item";
 import { ContactForm } from "../components/contact-fom";
 
-export function LandingPage() {
+export default function LandingPage() {
   return (
     <>
       <Header />
@@ -41,7 +41,7 @@ export function LandingPage() {
         </section>
 
         <section
-          id="missao"
+          id="missao-e-negocio"
           className="relative min-h-screen flex items-center justify-center bg-[#45B649] text-zinc-100 z-20"
         >
           <div className="container mx-auto px-4 py-24 md:py-32 flex justify-between relative">
@@ -104,7 +104,7 @@ export function LandingPage() {
             </motion.div>
           </div>
         </section>
-        <section>
+        <section id="contato">
           <div className="container mx-auto px-4 py-24 md:py-32">
             <motion.div
               initial={{ opacity: 0 }}
