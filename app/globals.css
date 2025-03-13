@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "OpenSauceSans";
+  src: url("/fonts/OpenSauceSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Aminute";
+  src: url("/fonts/Aminute.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --foreground-rgb: 51, 51, 51;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  overflow-x: hidden;
+  font-family: "OpenSauceSans", sans-serif;
+}
+
+/* Efeito de sobreposição das seções */
+section {
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
+  margin-bottom: -5vw;
+}
+
+section:last-child {
+  clip-path: none;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 10vw));
+    margin-bottom: -10vw;
+  }
+}
+
