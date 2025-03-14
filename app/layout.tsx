@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 export const metadata: Metadata = {
   title: "Eidos",
@@ -13,7 +15,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased font-sans scroll-smooth`}>{children}</body>
+      <body className={`antialiased font-sans scroll-smooth`}>
+        <Header/>
+        {children}
+        <Footer/>
+        </body>
     </html>
   );
 }

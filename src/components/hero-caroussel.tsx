@@ -37,9 +37,9 @@ export function HeroCarousel() {
         </motion.div>
       </AnimatePresence>
       <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50">
-        <div>
+        <div className="w-4/5 mx-auto">
 
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 font-aminute text-white">
+        <h1 className="text-4xl md:text-1xl font-bold mb-4 font-aminute text-white">
           Bem-vindo ao Instituto Eidos
         </h1>
         <p className="text-xl md:text-2xl mb-8 font-sans text-white">
