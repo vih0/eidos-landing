@@ -1,7 +1,6 @@
 "use client";
 
 import type React from "react";
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -13,6 +12,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
+    console.log("Menu toggled, isMenuOpen:", !isMenuOpen);
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -74,14 +74,16 @@ export function Header() {
             onClick={toggleMenu}
             aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
           >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMenuOpen ? (
+              <X size={24} className="text-gray-900 z-50" />
+            ) : (
+              <Menu size={24} />
+            )}
           </button>
         </div>
       </div>
-
-      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 flex items-center justify-center md:hidden">
+        <div className="fixed inset-0 bg-white z-40 flex items-center justify-center overflow-hidden md:hidden">
           <nav className="flex flex-col items-center space-y-8 text-xl">
             <NavLink href="#sobre-nos" onClick={closeMenu} isScrolled={true}>
               Sobre Nós

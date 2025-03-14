@@ -41,7 +41,7 @@ export default function LandingPage() {
         </section>
 
         <section
-          id="missao-e-negocio"
+          id="visao"
           className="relative min-h-screen flex items-center justify-center bg-[#45B649] text-zinc-100 z-20"
         >
           <div className="container mx-auto px-4 py-24 md:py-32 flex justify-between relative">
@@ -67,7 +67,7 @@ export default function LandingPage() {
         </section>
 
         <section
-          id="visao"
+          id="missao"
           className="relative min-h-screen flex items-center justify-center bg-[#00A7BE] text-zinc-100 z-30"
         >
           <div className="container mx-auto px-4 py-24 md:py-32">
