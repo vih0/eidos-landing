@@ -1,5 +1,4 @@
 "use client";
-
 import type React from "react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -36,7 +35,9 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-md" : "bg-transparent"
+        isScrolled && !isMenuOpen
+          ? "bg-white/90 backdrop-blur-sm shadow-md"
+          : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-4 py-3 md:py-4">
@@ -52,7 +53,7 @@ export function Header() {
             </div>
           </Link>
 
-          <nav className="hidden md:flex space-x-6 lg:space-x-8">
+          <nav className="hidden overflow-y-hidden md:flex space-x-6 lg:space-x-8">
             <NavLink href="#sobre-nos" isScrolled={isScrolled}>
               Sobre Nós
             </NavLink>
@@ -68,7 +69,7 @@ export function Header() {
           </nav>
 
           <button
-            className={`md:hidden z-10 ${
+            className={`visible md:hidden z-10 ${
               isScrolled ? "text-gray-900" : "text-white"
             }`}
             onClick={toggleMenu}
@@ -83,7 +84,7 @@ export function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-40 flex items-center justify-center overflow-hidden md:hidden">
+        <div className="fixed bottom-0 left-0 top-0 right-0 bg-white z-1 flex items-center justify-center overflow-hidden md:hidden">
           <nav className="flex flex-col items-center space-y-8 text-xl">
             <NavLink href="#sobre-nos" onClick={closeMenu} isScrolled={true}>
               Sobre Nós
