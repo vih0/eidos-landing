@@ -71,7 +71,6 @@ export function ContactForm() {
 
   const onSubmit = async (data: Form) => {
     setIsSubmitting(true);
-
     try {
       const result = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string,
@@ -137,7 +136,7 @@ export function ContactForm() {
             <input
               type="text"
               id="nome"
-              {...register("nome")}
+              {...(register("nome"), { required: true })}
               className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
                 errors.nome
                   ? "border-red-300 focus:ring-red-200"
@@ -160,7 +159,7 @@ export function ContactForm() {
               type="text"
               id="telefone"
               placeholder="(XX) XXXXX-XXXX"
-              {...register("telefone")}
+              {...register("telefone", { required: true })}
               onInput={handlePhoneInput}
               className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
                 errors.telefone
@@ -186,7 +185,7 @@ export function ContactForm() {
           <input
             type="email"
             id="email"
-            {...register("email")}
+            {...register("email", { required: true })}
             className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
               errors.email
                 ? "border-red-300 focus:ring-red-200"
@@ -208,7 +207,7 @@ export function ContactForm() {
             </label>
             <select
               id="estado"
-              {...register("estado")}
+              {...register("estado", { required: true })}
               className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 appearance-none bg-white ${
                 errors.estado
                   ? "border-red-300 focus:ring-red-200"
@@ -245,7 +244,7 @@ export function ContactForm() {
             <input
               type="text"
               id="municipio"
-              {...register("municipio")}
+              {...register("municipio", { required: true })}
               className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
                 errors.municipio
                   ? "border-red-300 focus:ring-red-200"
@@ -270,7 +269,7 @@ export function ContactForm() {
           <input
             type="text"
             id="cargo"
-            {...register("cargo")}
+            {...register("cargo", { required: true })}
             className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
               errors.cargo
                 ? "border-red-300 focus:ring-red-200"
@@ -292,7 +291,7 @@ export function ContactForm() {
           <textarea
             id="mensagem"
             rows={5}
-            {...register("mensagem")}
+            {...register("mensagem", { required: true })}
             className={`w-full px-4 py-3 border rounded-xl focus:outline-none focus:ring-2 ${
               errors.mensagem
                 ? "border-red-300 focus:ring-red-200"
