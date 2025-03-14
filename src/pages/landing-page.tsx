@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion"
 
-
 import { MissionItem } from "@/components/mission-item"
 import { HeroCarousel } from "@/components/hero-caroussel"
 import { ContactForm } from "@/components/contact-fom"
@@ -15,7 +14,7 @@ export function LandingPage() {
         <HeroCarousel />
 
         <section id="sobre-nos" className="relative min-h-screen flex items-center justify-center z-10">
-          <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-32">
+          <div className="container mx-auto px-4 py-16 sm:py-20 w-4/5 md:py-24 lg:py-32">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -32,17 +31,18 @@ export function LandingPage() {
               </p>
             </motion.div>
           </div>
-          <div
-            className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-contain bg-repeat-x bg-bottom"
-            style={{ backgroundImage: "url('/assets/icons.svg')" }}
-          ></div>
+       
         </section>
 
         <section
           id="visao"
           className="relative min-h-screen flex items-center justify-center bg-[#45B649] text-zinc-100 z-20"
         >
-          <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-32">
+             <div
+            className="absolute top-0 left-0 w-full h-16 sm:h-24 bg-contain bg-repeat-x bg-bottom"
+            style={{ backgroundImage: "url('/assets/icons.svg')" }}
+          ></div>
+          <div className="container mx-auto px-4 py-16 sm:py-20 w-4/5 md:py-24 lg:py-32">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -66,7 +66,8 @@ export function LandingPage() {
           id="missao-e-negocio"
           className="relative min-h-screen flex items-center justify-center bg-[#00A7BE] text-zinc-100 z-30"
         >
-          <div className="container mx-auto px-4 py-16 sm:py-20 md:py-24 lg:py-32">
+
+          <div className="container mx-auto px-4 py-16 sm:py-16 w-4/5 md:py-24 lg:py-32">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -77,7 +78,7 @@ export function LandingPage() {
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-10 sm:mb-16 text-zinc-100 text-center font-aminute">
                 Missão e Negócio
               </h2>
-              <div className="flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0 md:space-x-8">
+              <div className="flex flex-col mb-24 md:flex-row justify-between items-start space-y-12 md:space-y-0 md:space-x-8">
                 <MissionItem
                   title="Missão"
                   content="Ser referência na criação de ferramentas e
