@@ -34,7 +34,26 @@ section {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 5vw));
   margin-bottom: -5vw;
 }
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.3;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(calc(100vh + 100px)) rotate(360deg);
+    opacity: 0;
+  }
+}
 
+.animate-fall {
+  animation: fall linear infinite;
+}
 section:last-child {
   clip-path: none;
   margin-bottom: 0;

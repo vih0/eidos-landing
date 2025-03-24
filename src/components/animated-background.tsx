@@ -39,7 +39,7 @@ export function AnimatedBackground() {
           animate={{ opacity: 0.3 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 2 }}
-          className="absolute text-2xl md:text-4xl font-sans"
+          className="absolute text-2xl md:text-4xl font-aminute"
           style={{
             left: `${word.x}%`,
             top: `${word.y}%`,
