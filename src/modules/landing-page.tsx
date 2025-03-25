@@ -8,6 +8,7 @@ import { ContactForm } from "@/components/contact-fom";
 import { FallingLogos } from "@/components/fall-logos";
 
 import Image from "next/image";
+import { ClientsPartners } from "./partners-and-client-section";
 
 export function LandingPage() {
   return (
@@ -23,7 +24,7 @@ export function LandingPage() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="w-4/5 mx-auto flex"
+            className="w-4/5 mx-auto flex gap-14"
           >
             <div>
               <div className="flex gap-2">
@@ -44,15 +45,15 @@ export function LandingPage() {
                 bem-estar social. Nossa equipe multidisciplinar trabalha
                 incansavelmente para criar um futuro melhor para todos.
               </p>
-            </div>
 
+            </div>
             <Image
               src="/assets/teste.png"
-              width={250}
-              height={260}
+              width={300}
+              height={250}
               quality={100}
               alt="banner eidos"
-              className="object-cover"
+             className="object-contain" 
             />
           </motion.div>
         </div>
@@ -91,17 +92,10 @@ export function LandingPage() {
               qualificação e inovação na gestão governamental, com foco em
               processos sustentáveis e resultados impactantes para a sociedade.
             </p>
-            <Image
-              src="/assets/teste.png"
-              width={250}
-              height={260}
-              quality={100}
-              alt="banner eidos"
-              className="visible sm:hidden md:hidden"
-            />
+        
           </motion.div>
         </div>
-        <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-gradient-to-t from-green-300 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-gradient-to-t from-blue-400 to-transparent"></div>
       </section>
 
       <section
@@ -116,7 +110,7 @@ export function LandingPage() {
             viewport={{ once: true }}
             className="max-w-5xl mx-auto"
           >
-            <div className="flex items-center justify-center gap-2">
+            <div className="flex items-center justify-center gap-2 mb-6">
               <Image
                 src="/assets/arrow-yellow.svg"
                 width={36}
@@ -148,9 +142,9 @@ export function LandingPage() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-gradient-to-t from-gray-400 to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-gradient-to-t from-slate-200 to-transparent"></div>
       </section>
-
+      <ClientsPartners />
       <section
         id="contato"
         className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50 z-40"

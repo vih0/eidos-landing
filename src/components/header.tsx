@@ -37,7 +37,7 @@ export function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled && !isMenuOpen
           ? "bg-white/90 backdrop-blur-sm shadow-md"
-          : "bg-transparent"
+          : "bg-gray-900 bg-opacity-15"
       }`}
     >
       <div className="container mx-auto px-4 py-3 md:py-4">
@@ -62,6 +62,9 @@ export function Header() {
             </NavLink>
             <NavLink href="#visao" isScrolled={isScrolled}>
               Visão
+            </NavLink>
+            <NavLink href="#clientes-parceiros" isScrolled={isScrolled}>
+              Clientes e Parceiros
             </NavLink>
             <NavLink href="#contato" isScrolled={isScrolled}>
               Contato
