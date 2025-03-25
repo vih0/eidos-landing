@@ -45,7 +45,6 @@ export function LandingPage() {
                 bem-estar social. Nossa equipe multidisciplinar trabalha
                 incansavelmente para criar um futuro melhor para todos.
               </p>
-
             </div>
             <Image
               src="/assets/teste.png"
@@ -53,7 +52,7 @@ export function LandingPage() {
               height={250}
               quality={100}
               alt="banner eidos"
-             className="object-contain" 
+              className="object-contain"
             />
           </motion.div>
         </div>
@@ -92,7 +91,6 @@ export function LandingPage() {
               qualificação e inovação na gestão governamental, com foco em
               processos sustentáveis e resultados impactantes para a sociedade.
             </p>
-        
           </motion.div>
         </div>
         <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-gradient-to-t from-blue-400 to-transparent"></div>
