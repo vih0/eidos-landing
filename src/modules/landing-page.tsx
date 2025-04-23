@@ -80,7 +80,7 @@ export function LandingPage() {
                 width={36}
                 height={36}
                 alt="icone de seta"
-                className="lg:size-11 sm:mb-9 sm:size-7 lg:mb-14"
+                className="lg:size-11 sm:mb-9 sm:size-7 "
               />
               <h2 className="text-xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8 text-center font-aminute">
                 Visão
@@ -142,7 +142,18 @@ export function LandingPage() {
 
         <div className="absolute bottom-0 left-0 w-full h-16 sm:h-24 bg-gradient-to-t from-slate-200 to-transparent"></div>
       </section>
-      <ClientsPartners />
+
+      {/* <ClientsPartners /> */}
+      {/* <section>
+        <motion.div
+         initial={{ opacity: 0, y: 20 }}
+         whileInView={{ opacity: 1, y: 0 }}
+         transition={{ duration: 0.8 }}
+         viewport={{ once: true }}
+        >
+       <Image src={'/assets/o-que-fazemos.png'} fill/>
+        </motion.div>
+      </section> */}
       <section
         id="contato"
         className="relative py-16 sm:py-20 md:py-24 lg:py-32 bg-gray-50 z-40"

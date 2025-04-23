@@ -1,14 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
-          {
-          
-            hostname: 'drive.google.com',
-          
-          },
-        ],
-      },
+  reactStrictMode:true,
+  output:'standalone',
 };
 
 export default nextConfig;

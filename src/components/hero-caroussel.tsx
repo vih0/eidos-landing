@@ -5,13 +5,13 @@ import Image from "next/image";
 
 const images = [
   "/assets/banner-1.png",
-  "/assets/banner-3.png ",
-  "/assets/banner-site-eidos.png ",
+  "/assets/banner-2.png",
+  "/assets/banner-3.png",
 ];
 
 export function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-
+  console.log(images[currentIndex]);
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
