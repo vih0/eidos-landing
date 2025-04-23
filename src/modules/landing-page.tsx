@@ -8,7 +8,6 @@ import { ContactForm } from "@/components/contact-fom";
 import { FallingLogos } from "@/components/fall-logos";
 
 import Image from "next/image";
-import { ClientsPartners } from "./partners-and-client-section";
 
 export function LandingPage() {
   return (
